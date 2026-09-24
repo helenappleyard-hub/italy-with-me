@@ -1,0 +1,9 @@
+.DS_Store
+Accounting/
+node_modules/
+dist/
+.env
+.env.*
+*.HEIC
+Map of firenze regions and piazzas*
+*.docx
