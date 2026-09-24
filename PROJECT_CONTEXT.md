@@ -181,7 +181,9 @@ Lovable is the proposed initial website-building environment. Codex and other AI
 - **Confirmed:** Code repository is `github.com/helenappleyard-hub/italy-with-me` (public; owner Helen, GitHub user `helenappleyard-hub`).
 - **Confirmed:** Domain `italywithme.com.au` is registered at GoDaddy (registered 15 July 2026, 1-year term, so renewal is due around July 2027). Domain Ownership Protection was purchased with it.
 - **Confirmed:** Microsoft 365 Email Essentials (1-year term, from 15 July 2026) is on the same GoDaddy account. It covers email only; it does not include Excel/SharePoint or Power Automate.
-- **Constraint:** The domain's email (MX) DNS records serve the Microsoft 365 mailbox. Never edit or delete MX, autodiscover or email-related TXT (SPF/DKIM) records when changing website DNS.
+- **Confirmed (24 Sep 2026):** `italywithme.com.au` is a verified GitHub Pages domain on the `helenappleyard-hub` account (TXT record `_github-pages-challenge-helenappleyard-hub` in GoDaddy DNS; keep it).
+- **Issue (24 Sep 2026):** GoDaddy DNS had no MX records, so the Microsoft 365 mailbox is not yet connected to the domain and will not receive mail. **TODO:** connect it through GoDaddy's Microsoft 365 setup.
+- **Constraint:** Once connected, the domain's email (MX) DNS records serve the Microsoft 365 mailbox. Never edit or delete MX, autodiscover or email-related TXT (SPF/DKIM) records when changing website DNS.
 - **Privacy:** This repository is public. Never commit receipts, home address, account or customer numbers, payment details or other private documents. Receipts are kept in the git-ignored `Accounting/` folder.
 
 ### Proposed technical choices
