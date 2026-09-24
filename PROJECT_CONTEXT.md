@@ -17,6 +17,8 @@ This document records the current brief; it does not establish final itineraries
 - **Descriptor:** “Your personal Florence Guide”
 - **Phone:** +61 412 286 220
 - **Email:** helenappleyard@live.com.au
+- **Domain:** italywithme.com.au (confirmed; registered with GoDaddy)
+- **Business email:** Microsoft 365 Email Essentials mailbox purchased through GoDaddy. The receipt lists the mailbox as `helen@italywithme.com`; **TODO:** confirm the exact address (likely `helen@italywithme.com.au`) before displaying it anywhere.
 - **Existing logo:** Preserve and use the existing Italy With Me logo. Do not redesign, redraw, replace, distort, or recolour it without Helen’s explicit direction.
 
 Brand qualities: warm, knowledgeable, thoughtful, intimate, elegant, and grounded in Florence’s craft and character.
@@ -174,14 +176,26 @@ Lovable is the proposed initial website-building environment. Codex and other AI
 - Run checks appropriate to the actual stack and the changes made. Report what was verified and any remaining gaps.
 - Do not treat this brief as authorization to publish the site, purchase services, or send messages on Helen’s behalf.
 
+### Accounts and infrastructure
+
+- **Confirmed:** Code repository is `github.com/helenappleyard-hub/italy-with-me` (public; owner Helen, GitHub user `helenappleyard-hub`).
+- **Confirmed:** Domain `italywithme.com.au` is registered at GoDaddy (registered 15 July 2026, 1-year term, so renewal is due around July 2027). Domain Ownership Protection was purchased with it.
+- **Confirmed:** Microsoft 365 Email Essentials (1-year term, from 15 July 2026) is on the same GoDaddy account. It covers email only; it does not include Excel/SharePoint or Power Automate.
+- **Constraint:** The domain's email (MX) DNS records serve the Microsoft 365 mailbox. Never edit or delete MX, autodiscover or email-related TXT (SPF/DKIM) records when changing website DNS.
+- **Privacy:** This repository is public. Never commit receipts, home address, account or customer numbers, payment details or other private documents. Receipts are kept in the git-ignored `Accounting/` folder.
+
+### Proposed technical choices
+
+- **Proposed:** Hosting on GitHub Pages (free) with `italywithme.com.au` as the custom domain and HTTPS enforced.
+- **Proposed:** Booking/interest requests stored in a Google Sheet via a Google Apps Script web app, which also emails each request to helenappleyard@live.com.au (free; the Microsoft route would need paid Power Automate).
+
 ### Undecided technical choices
 
-- **TODO:** Existing Lovable project/repository location and repository owner.
 - **TODO:** Framework, language, styling approach, and package manager.
-- **TODO:** Hosting, deployment workflow, domain, and canonical URL.
+- **TODO:** Canonical URL (`italywithme.com.au` vs `www.italywithme.com.au`).
 - **TODO:** Content editing approach or CMS, if needed.
 - **TODO:** Map provider and route presentation method.
-- **TODO:** Enquiry delivery/storage provider and spam protection.
+- **TODO:** Spam protection beyond a honeypot field.
 - **TODO:** Whether booking remains enquiry-led or uses a booking/payment integration.
 - **TODO:** Analytics, consent requirements, and operational ownership.
 
