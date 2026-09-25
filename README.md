@@ -20,7 +20,13 @@ Page-specific layout is in `site/css/page.css`; the form logic is in
 ### Connecting sign-ups to a Google Sheet (done once, by Helen)
 
 **Status (25 Sep 2026): done.** The live Sheet is **Italy With Me – Bookings**
-(sign-ups go to its "Sign-ups" tab). The script is deployed as a web app
+(sign-ups go to its "Sign-ups" tab). Only people Helen has shared them with
+can open these links:
+
+- Sheet: https://docs.google.com/spreadsheets/d/1bcByb_Yr_XEcg9611dfM7jGlbDAldhArNark5-ThVg8/edit
+- Apps Script project: https://script.google.com/u/0/home/projects/1FyO7YPKUfSj8sjZAJUypRujrPFt2d8dK9kfAhLOeeJICGyzqhCvoNLkj/edit
+
+The script is deployed as a web app
 (version 1) and its URL is set in `site/js/signup.js`. If `SIGNUP_ENDPOINT`
 is ever emptied, the form checks the email address and then asks visitors
 to email Helen directly; nothing is saved.
