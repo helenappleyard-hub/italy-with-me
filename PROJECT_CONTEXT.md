@@ -187,6 +187,7 @@ Lovable is the proposed initial website-building environment. Codex and other AI
 - **Privacy:** This repository is public. Never commit receipts, home address, account or customer numbers, payment details or other private documents. Receipts are kept in the git-ignored `Accounting/` folder.
 
 - **Confirmed (25 Sep 2026):** Hosting on GitHub Pages (free), deployed by GitHub Actions from the `site/` folder only. Main address is `italywithme.com.au` (`www` redirects to it); HTTPS enforced. Setup steps and GoDaddy DNS records are in `README.md`.
+- **Confirmed (25 Sep 2026):** Pages source set to GitHub Actions; holding page deployed. GoDaddy DNS updated (four GitHub Pages `A` records for `@`, `www` CNAME to `helenappleyard-hub.github.io`) and GitHub's DNS check passed. **TODO:** tick Enforce HTTPS once GitHub issues the certificate.
 
 ### Proposed technical choices
 
