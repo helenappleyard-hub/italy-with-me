@@ -18,7 +18,7 @@ This document records the current brief; it does not establish final itineraries
 - **Phone:** +61 412 286 220
 - **Email:** helenappleyard@live.com.au
 - **Domain:** italywithme.com.au (confirmed; registered with GoDaddy)
-- **Business email:** Microsoft 365 Email Essentials mailbox purchased through GoDaddy. The receipt lists the mailbox as `helen@italywithme.com`; **TODO:** confirm the exact address (likely `helen@italywithme.com.au`) before displaying it anywhere.
+- **Email used by the business (confirmed 25 Sep 2026):** Only `helenappleyard@live.com.au` is used — on the website, for form notifications, and for emailing people who register interest. Do not display or send from any `@italywithme` address.
 - **Existing logo:** Preserve and use the existing Italy With Me logo. Do not redesign, redraw, replace, distort, or recolour it without Helen’s explicit direction.
 
 Brand qualities: warm, knowledgeable, thoughtful, intimate, elegant, and grounded in Florence’s craft and character.
@@ -182,19 +182,19 @@ Lovable is the proposed initial website-building environment. Codex and other AI
 - **Confirmed:** Domain `italywithme.com.au` is registered at GoDaddy (registered 15 July 2026, 1-year term, so renewal is due around July 2027). Domain Ownership Protection was purchased with it.
 - **Confirmed:** Microsoft 365 Email Essentials (1-year term, from 15 July 2026) is on the same GoDaddy account. It covers email only; it does not include Excel/SharePoint or Power Automate.
 - **Confirmed (24 Sep 2026):** `italywithme.com.au` is a verified GitHub Pages domain on the `helenappleyard-hub` account (TXT record `_github-pages-challenge-helenappleyard-hub` in GoDaddy DNS; keep it).
-- **Issue (24 Sep 2026):** GoDaddy DNS had no MX records, so the Microsoft 365 mailbox is not yet connected to the domain and will not receive mail. **TODO:** connect it through GoDaddy's Microsoft 365 setup.
-- **Constraint:** Once connected, the domain's email (MX) DNS records serve the Microsoft 365 mailbox. Never edit or delete MX, autodiscover or email-related TXT (SPF/DKIM) records when changing website DNS.
+- **Decision (25 Sep 2026):** The Microsoft 365 mailbox will not be used; Helen uses only `helenappleyard@live.com.au`. GoDaddy DNS has no MX records and connecting the mailbox is not required. (It is a paid 1-year term; whether to cancel or let it lapse is Helen's call.)
+- **Constraint:** Do not add, edit or delete MX, autodiscover or email-related TXT (SPF/DKIM) records when changing website DNS unless Helen asks.
 - **Privacy:** This repository is public. Never commit receipts, home address, account or customer numbers, payment details or other private documents. Receipts are kept in the git-ignored `Accounting/` folder.
+
+- **Confirmed (25 Sep 2026):** Hosting on GitHub Pages (free), deployed by GitHub Actions from the `site/` folder only. Main address is `italywithme.com.au` (`www` redirects to it); HTTPS enforced. Setup steps and GoDaddy DNS records are in `README.md`.
 
 ### Proposed technical choices
 
-- **Proposed:** Hosting on GitHub Pages (free) with `italywithme.com.au` as the custom domain and HTTPS enforced.
 - **Proposed:** Booking/interest requests stored in a Google Sheet via a Google Apps Script web app, which also emails each request to helenappleyard@live.com.au (free; the Microsoft route would need paid Power Automate).
 
 ### Undecided technical choices
 
 - **TODO:** Framework, language, styling approach, and package manager.
-- **TODO:** Canonical URL (`italywithme.com.au` vs `www.italywithme.com.au`).
 - **TODO:** Content editing approach or CMS, if needed.
 - **TODO:** Map provider and route presentation method.
 - **TODO:** Spam protection beyond a honeypot field.
