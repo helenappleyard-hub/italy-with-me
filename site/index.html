@@ -3,49 +3,192 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Italy With Me – Your personal Florence Guide</title>
-  <meta name="description" content="Italy With Me – Your personal Florence Guide, with Helen Appleyard. Coming soon.">
-  <!-- Temporary holding page: keep out of search results until the real landing page replaces it. -->
-  <meta name="robots" content="noindex">
-  <style>
-    :root {
-      --bg: #1f1c16;
-      --paper: #f3ead8;
-      --ink: #f3ead8;
-      --muted: #cbbf9f;
-      --accent: #e0a37e;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-      text-align: center;
-      padding: 32px 16px;
-    }
-    main { max-width: 640px; width: 100%; }
-    img { width: 100%; height: auto; display: block; }
-    h1 { font-weight: normal; font-size: 1.5rem; margin: 24px 0 8px; }
-    p { color: var(--muted); font-size: 1.05rem; line-height: 1.6; margin: 0 0 8px; }
-    a { color: var(--accent); }
-    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-  </style>
+  <title>Italy With Me · Join Helen’s list</title>
+  <meta name="description" content="Private walks through Florence with Helen Appleyard, an Australian from Perth who fell in love with Italy and learnt the language. Join the list to hear first.">
+  <link rel="canonical" href="https://italywithme.com.au/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://italywithme.com.au/">
+  <meta property="og:title" content="Italy With Me · Join Helen’s list">
+  <meta property="og:description" content="Private walks in Florence with Helen Appleyard. Join the list to hear first.">
+  <meta property="og:image" content="https://italywithme.com.au/images/logo.webp">
+  <link rel="icon" href="images/logo.webp" type="image/webp">
+  <link rel="preload" href="ds/fonts/CormorantGaramond-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="ds/fonts/SourceSerif4-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="ds/tokens/fonts.css">
+  <link rel="stylesheet" href="ds/tokens/colors.css">
+  <link rel="stylesheet" href="ds/tokens/typography.css">
+  <link rel="stylesheet" href="ds/tokens/spacing.css">
+  <link rel="stylesheet" href="ds/tokens/base.css">
+  <link rel="stylesheet" href="ds/components/components.css">
+  <link rel="stylesheet" href="css/page.css">
+  <script src="js/signup.js" defer></script>
 </head>
 <body>
-  <main>
-    <picture>
-      <source srcset="images/italy-with-me-logo.webp" type="image/webp">
-      <img src="images/italy-with-me-logo.jpg" width="960" height="640"
-           alt="Italy With Me logo: an engraving of Florence's Duomo framed by olives and grapes">
-    </picture>
-    <h1>Your personal Florence Guide</h1>
-    <p>Coming soon.</p>
-    <p><a href="mailto:helenappleyard@live.com.au">helenappleyard@live.com.au</a></p>
-  </main>
+<!-- Fleur-de-lys ornament by Lorc (game-icons.net), CC BY 3.0. Icons: Lucide (ISC). -->
+<main class="page">
+
+  <section id="join" class="hero" aria-labelledby="hero-title">
+    <span class="iwm-logo" style="height:96px"><img src="images/logo.webp" alt="Italy With Me" width="144" height="96" style="height:96px;width:auto"></span>
+    <div class="hero__intro">
+      <p class="eyebrow">Private walks in Florence</p>
+      <h1 id="hero-title" class="hero__title">Let me show you my <em lang="it">Firenze</em>.</h1>
+      <div class="iwm-divider iwm-divider--short" role="presentation" aria-hidden="true"><svg class="iwm-fleur" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M256 24c-31.466 48-62.932 96-62.932 160c0 56.794 37.144 113.568 45.514 148h34.836c8.37-34.432 45.514-91.206 45.514-148c0-64-31.466-112-62.932-160M98.637 206c-47.2 0-78.664 32-78.664 80c0 32 22.115 63.526 62.93 64c-15.732-16 .002-64 31.468-64c31.890 0 56.58 21.916 69.253 46h33.828c-13.744-47.52-49.108-126-118.813-126zm314.726 0c-69.705 0-105.070 78.48-118.814 126h33.827c12.673-24.084 37.362-46 69.252-46c31.465 0 47.2 48 31.466 64c40.816-.474 62.930-32 62.930-64c0-48-31.464-80-78.663-80zM153.076 350c-38.705 0-54.440 16-54.440 48c0 16 15.734 48 47.2 48c35.4 0 61.948-27 73.010-54h-35.682c-4.657 3.570-11.5 6-21.596 6c-15.733 0-31.464-32-8.492-48m37.694 0c.017.064.03.127.048.19c-13.29 2.16-12.694 23.343 1.793 23.79v.02H319.390l-.003-.02c14.486-.447 15.083-21.630 1.792-23.790c.017-.063.03-.126.048-.19zm168.154 0c22.972 16 7.24 48-8.492 48c-10.096 0-16.940-2.430-21.596-6h-35.682c11.062 27 37.610 54 73.010 54c31.466 0 47.2-32 47.2-48c0-32-15.735-48-54.440-48m-118.656 42c-15.733 16-15.734 48-31.467 64l31.468-16c0 16 0 32 15.732 48c15.733-16 15.732-32 15.732-48l31.467 16c-15.734-16-15.735-48-31.468-64z"/></svg></div>
+    </div>
+
+    <div class="signup">
+      <!-- Step 1: name + email -->
+      <div class="signup__step" data-step="form">
+        <div class="signup__perks">
+          <div class="signup__perk"><span class="icon-disc"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4" /> <path d="M16 2v4" /> <rect width="18" height="18" x="3" y="4" rx="2" /> <path d="M3 10h18" /></svg></span><span>First pick of dates</span></div>
+          <div class="signup__perk"><span class="icon-disc"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /></svg></span><span>Curated experiences</span></div>
+        </div>
+        <form class="signup__form" id="signup-form" novalidate>
+          <div class="signup__fields">
+            <div class="iwm-field">
+              <label class="iwm-field__label" for="first-name">First name<span class="iwm-field__opt">(optional)</span></label>
+              <input id="first-name" name="name" class="iwm-field__control" type="text" autocomplete="given-name">
+            </div>
+            <div class="iwm-field" id="email-field">
+              <label class="iwm-field__label" for="email">Email</label>
+              <p class="iwm-field__error" id="email-error" hidden><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <line x1="12" x2="12" y1="8" y2="12" /> <line x1="12" x2="12.01" y1="16" y2="16" /></svg><span><span class="iwm-visually-hidden">Error: </span><span id="email-error-text"></span></span></p>
+              <input id="email" name="email" class="iwm-field__control" type="email" inputmode="email" autocomplete="email" aria-required="true">
+            </div>
+          </div>
+          <div class="signup__trap" aria-hidden="true">
+            <label for="website">Leave this empty</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <p class="signup__notice" id="signup-notice" role="alert" hidden></p>
+          <button type="submit" class="iwm-btn iwm-btn--primary iwm-btn--lg iwm-btn--block"><span>Join the list</span></button>
+          <p class="signup__small">Occasional emails. Unsubscribe any time. <a href="#privacy">Privacy</a></p>
+        </form>
+      </div>
+
+      <!-- Step 2: optional planning questions -->
+      <div class="signup__step" data-step="details" tabindex="-1" hidden>
+        <div class="signup__heading" role="status">
+          <h2 class="signup__thanks" data-thanks>Grazie!</h2>
+          <p class="signup__lede">A little more? All optional.</p>
+        </div>
+        <form class="signup__form" id="details-form">
+          <div class="iwm-field">
+                <label class="iwm-field__label" for="when">When?<span class="iwm-field__opt">(optional)</span></label>
+                <div class="iwm-field__select"><select id="when" name="when" class="iwm-field__control"><option value="">Not sure yet</option><option value="soon">Within 6 months</option><option value="year">In 6–12 months</option><option value="later">Later</option></select><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></div>
+              </div>
+          <div class="iwm-field">
+                <label class="iwm-field__label" for="who">Who’s coming?<span class="iwm-field__opt">(optional)</span></label>
+                <div class="iwm-field__select"><select id="who" name="who" class="iwm-field__control"><option value="">Not sure yet</option><option value="solo">Just me</option><option value="partner">My partner</option><option value="friends">A friend or two</option><option value="group">A small group</option></select><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></div>
+              </div>
+          <div class="iwm-field">
+                <label class="iwm-field__label" for="walk">Which walk?<span class="iwm-field__opt">(optional)</span></label>
+                <div class="iwm-field__select"><select id="walk" name="walk" class="iwm-field__control"><option value="">Both sound lovely</option><option value="artisans">The Hidden Artisans of Santo Spirito</option><option value="wine">Florence Wine Window Tour</option></select><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></div>
+              </div>
+          <div class="signup__actions">
+            <button type="submit" class="iwm-btn iwm-btn--primary"><span>Send</span></button>
+            <button type="button" class="iwm-btn iwm-btn--text" data-skip><span>Skip</span></button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Step 3: done -->
+      <div class="signup__step signup__done" data-step="done" tabindex="-1" hidden>
+        <div class="signup__step signup__done" role="status">
+          <span class="icon-disc icon-disc--lg"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span>
+          <h2 class="signup__thanks" data-thanks>Grazie!</h2>
+          <p class="signup__lede">You’re on the list: <strong data-email></strong></p>
+        </div>
+        <button type="button" class="iwm-btn iwm-btn--secondary" data-share><span data-share-icon><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path d="m21.854 2.147-10.94 10.939" /></svg></span><span data-share-label>Share with a friend</span></button>
+      </div>
+    </div>
+
+    <img class="hero__skyline" src="images/skyline.webp" alt="Watercolour of the Florence skyline with the Duomo" width="1013" height="134">
+  </section>
+
+  <section class="expect" aria-label="What to expect">
+    <ul class="expect__grid">
+      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></span>Private</li>
+      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" /> <path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" /> <path d="M16 17h4" /> <path d="M4 13h4" /></svg></span>Your pace</li>
+      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg></span>Italian spoken</li>
+      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3" /> <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" /> <circle cx="18" cy="5" r="3" /></svg></span>Planned around you</li>
+    </ul>
+  </section>
+
+  <section class="taste" aria-label="A taste of Italy">
+    <div class="taste__row">
+      <figure class="polaroid polaroid--a"><img src="images/polaroid-pasta.webp" alt="Hands shaping fresh pasta" width="171" height="182" loading="lazy"><span class="iwm-script iwm-script--sm">Pasta fresca</span></figure>
+      <figure class="polaroid polaroid--b"><img src="images/polaroid-perfume.webp" alt="Glass perfume bottles in a Florentine shop" width="181" height="154" loading="lazy"><span class="iwm-script iwm-script--sm">Profumo</span></figure>
+      <figure class="polaroid polaroid--c"><img src="images/polaroid-tuscany.webp" alt="Tuscan hills with cypress trees at golden hour" width="195" height="183" loading="lazy"><span class="iwm-script iwm-script--sm">Toscana</span></figure>
+    </div>
+  </section>
+
+  <section class="walks" aria-labelledby="walks-title">
+    <div class="walks__head">
+      <p class="eyebrow">The walks</p>
+      <h2 id="walks-title" class="section-title">Two I can’t wait to share</h2>
+    </div>
+    <div class="walks__grid">
+      <article class="iwm-exp-card">
+          <div class="iwm-exp-card__media"><img src="images/artisan.webp" alt="A leather artisan at work in a Florentine workshop" width="720" height="960" loading="lazy"></div>
+          <div class="iwm-exp-card__body">
+            <p class="iwm-eyebrow">Oltrarno</p>
+            <h3 class="iwm-exp-card__title"><a href="#join">The Hidden Artisans of Santo Spirito</a></h3>
+            <p class="iwm-exp-card__text">Real makers. Authentic crafts.</p>
+            <div class="iwm-exp-card__foot"><a href="#join" class="iwm-btn iwm-btn--text" aria-label="Join the list: The Hidden Artisans of Santo Spirito"><span>Join the list</span><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a></div>
+          </div>
+        </article>
+      <article class="iwm-exp-card">
+          <div class="iwm-exp-card__media"><img src="images/wine.webp" alt="A small arched wine window set into a stone wall" width="720" height="960" loading="lazy"></div>
+          <div class="iwm-exp-card__body">
+            <p class="iwm-eyebrow">Across the city</p>
+            <h3 class="iwm-exp-card__title"><a href="#join">Florence Wine Window Tour</a></h3>
+            <p class="iwm-exp-card__text">Small windows. Big stories.</p>
+            <div class="iwm-exp-card__foot"><a href="#join" class="iwm-btn iwm-btn--text" aria-label="Join the list: Florence Wine Window Tour"><span>Join the list</span><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a></div>
+          </div>
+        </article>
+    </div>
+  </section>
+
+  <section class="helen" aria-labelledby="helen-title">
+    <div class="helen__grid">
+      <figure class="helen__figure">
+        <div class="helen__print"><img class="helen__photo iwm-img-warm" src="images/helen.webp" alt="Helen Appleyard smiling at a potter’s wheel in a ceramics workshop" width="720" height="960" loading="lazy"></div>
+      </figure>
+      <div class="helen__text">
+        <img class="helen__compass" src="images/compass-rose.webp" alt="" aria-hidden="true" width="123" height="115" loading="lazy">
+        <p class="eyebrow">From Perth to Florence</p>
+        <h2 id="helen-title" class="section-title">Ciao, I’m Helen</h2>
+        <p class="helen__bio">Italy stole my heart, so I learnt the language. Florence is my favourite city.</p>
+        <span class="iwm-script">Coffee first, then we wander.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="cta-title">
+    <h2 id="cta-title" class="cta__title">Florence brings you. Its people keep you.</h2>
+    <a href="#join" class="iwm-btn iwm-btn--inverse iwm-btn--lg"><span>Join the list</span></a>
+  </section>
+
+  <section id="privacy" class="privacy" aria-labelledby="privacy-title">
+    <div class="privacy__inner">
+      <h2 id="privacy-title" class="privacy__title">Privacy</h2>
+      <p>When you join the list, Helen keeps your first name, email address and any planning answers you choose to share in a private spreadsheet. She uses them only to email you about Italy With Me and to plan the walks. She never sells or shares them.</p>
+      <p>To be removed at any time, reply to any email or write to <a href="mailto:helenappleyard@live.com.au">helenappleyard@live.com.au</a>, and Helen will delete your details.</p>
+    </div>
+  </section>
+
+  <footer class="iwm-footer">
+    <div class="iwm-footer__inner">
+      <img class="footer__vignette" src="images/ponte-vecchio-vignette.webp" alt="Illustration of the Ponte Vecchio over the Arno" width="379" height="177" loading="lazy">
+      <p class="iwm-script iwm-script--sm iwm-script--tilt">See you in Florence.</p>
+      <div class="iwm-divider iwm-divider--short" role="presentation" aria-hidden="true"><svg class="iwm-fleur" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M256 24c-31.466 48-62.932 96-62.932 160c0 56.794 37.144 113.568 45.514 148h34.836c8.37-34.432 45.514-91.206 45.514-148c0-64-31.466-112-62.932-160M98.637 206c-47.2 0-78.664 32-78.664 80c0 32 22.115 63.526 62.93 64c-15.732-16 .002-64 31.468-64c31.890 0 56.58 21.916 69.253 46h33.828c-13.744-47.52-49.108-126-118.813-126zm314.726 0c-69.705 0-105.070 78.48-118.814 126h33.827c12.673-24.084 37.362-46 69.252-46c31.465 0 47.2 48 31.466 64c40.816-.474 62.930-32 62.930-64c0-48-31.464-80-78.663-80zM153.076 350c-38.705 0-54.440 16-54.440 48c0 16 15.734 48 47.2 48c35.4 0 61.948-27 73.010-54h-35.682c-4.657 3.570-11.5 6-21.596 6c-15.733 0-31.464-32-8.492-48m37.694 0c.017.064.03.127.048.19c-13.29 2.16-12.694 23.343 1.793 23.79v.02H319.390l-.003-.02c14.486-.447 15.083-21.630 1.792-23.790c.017-.063.03-.126.048-.19zm168.154 0c22.972 16 7.24 48-8.492 48c-10.096 0-16.940-2.430-21.596-6h-35.682c11.062 27 37.610 54 73.010 54c31.466 0 47.2-32 47.2-48c0-32-15.735-48-54.440-48m-118.656 42c-15.733 16-15.734 48-31.467 64l31.468-16c0 16 0 32 15.732 48c15.733-16 15.732-32 15.732-48l31.467 16c-15.734-16-15.735-48-31.468-64z"/></svg></div>
+      <p class="iwm-footer__name">Helen Appleyard</p>
+      <p class="iwm-footer__role">Your personal Florence guide</p>
+      <ul class="iwm-footer__contact">
+        <li><a href="mailto:helenappleyard@live.com.au"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg><span>helenappleyard@live.com.au</span></a></li>
+      </ul>
+      <p class="iwm-footer__legal">© 2026 Italy With Me · Private walks in Florence</p>
+    </div>
+  </footer>
+</main>
 </body>
 </html>

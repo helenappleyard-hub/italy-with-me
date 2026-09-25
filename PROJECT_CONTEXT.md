@@ -188,6 +188,7 @@ Lovable is the proposed initial website-building environment. Codex and other AI
 
 - **Confirmed (25 Sep 2026):** Hosting on GitHub Pages (free), deployed by GitHub Actions from the `site/` folder only. Main address is `italywithme.com.au` (`www` redirects to it); HTTPS enforced. Setup steps and GoDaddy DNS records are in `README.md`.
 - **Confirmed (25 Sep 2026):** Pages source set to GitHub Actions; holding page deployed. GoDaddy DNS updated (four GitHub Pages `A` records for `@`, `www` CNAME to `helenappleyard-hub.github.io`) and GitHub's DNS check passed. **TODO:** tick Enforce HTTPS once GitHub issues the certificate.
+- **Confirmed (25 Sep 2026):** First public page is the register-interest landing page from Claude Design ("Register Interest v4"). Helen confirmed the Helen photo is real and the copy ("an Australian from Perth", "learnt the language", "Italian spoken") is accurate. Sign-ups go to a Google Sheet via Google Apps Script (`apps-script/Code.gs`), which also emails helenappleyard@live.com.au. **TODO:** Helen creates the Sheet and deploys the script; then set `SIGNUP_ENDPOINT` in `site/js/signup.js`.
 
 ### Proposed technical choices
 
