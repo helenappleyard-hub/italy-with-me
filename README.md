@@ -11,8 +11,41 @@ The public website lives in `site/`. Only that folder is published: the
 it to GitHub Pages whenever `site/` changes on `main`. It can also be run by
 hand from the repo's **Actions** tab.
 
-`site/index.html` is currently a temporary "coming soon" holding page marked
-`noindex`. Replace it with the real landing page when that is ready.
+`site/index.html` is the register-interest landing page, built from the
+Claude Design file "Register Interest v4" and its Italy With Me design system
+(`site/ds/`: fonts, colour/type/spacing tokens and component styles).
+Page-specific layout is in `site/css/page.css`; the form logic is in
+`site/js/signup.js`. Copy rule from the design project: no em dashes in copy.
+
+### Connecting sign-ups to a Google Sheet (done once, by Helen)
+
+**Status (25 Sep 2026): done.** The live Sheet is **Italy With Me – Bookings**
+(sign-ups go to its "Sign-ups" tab). The script is deployed as a web app
+(version 1) and its URL is set in `site/js/signup.js`. If `SIGNUP_ENDPOINT`
+is ever emptied, the form checks the email address and then asks visitors
+to email Helen directly; nothing is saved.
+
+To update the script later, paste the new `Code.gs` into the Sheet's Apps
+Script project and use **Deploy → Manage deployments → Edit → New version**,
+so the URL stays the same. A new deployment gives a new URL.
+
+Original setup steps, for reference:
+
+1. In Google Drive, create a new Google Sheet (the live one is **Italy With Me – Bookings**).
+2. In the Sheet: **Extensions → Apps Script**. Delete what is there and paste
+   in the whole of `apps-script/Code.gs`. Click **Save**.
+3. Click **Deploy → New deployment**. Click the cog next to "Select type" and
+   choose **Web app**. Set **Execute as: Me** and **Who has access: Anyone**.
+   Click **Deploy**, then **Authorize access** and allow it (Google may warn
+   the app is unverified: choose Advanced → Go to project).
+4. Copy the **Web app URL** (it ends in `/exec`) and send it to whoever
+   maintains the site. It goes in `SIGNUP_ENDPOINT` at the top of
+   `site/js/signup.js`.
+
+Each sign-up then adds a row (date, first name, email, and the optional
+when / who / which walk answers) and emails helenappleyard@live.com.au.
+The URL is not secret, but only lets people add sign-ups. A hidden
+"honeypot" field drops simple spam bots.
 
 ### One-time GitHub Pages setup (done by Helen in GitHub)
 
@@ -48,3 +81,9 @@ In GoDaddy: **My Products → italywithme.com.au → DNS**.
 `italywithme.com.au` is the main address; GitHub automatically redirects
 `www.italywithme.com.au` to it. DNS changes usually apply within an hour
 but can take up to 48 hours.
+
+## Credits
+
+- Fleur-de-lys ornament: [Lorc](https://lorcblog.blogspot.com/), from [game-icons.net](https://game-icons.net/), licensed [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+- Icons: [Lucide](https://lucide.dev/) (ISC licence).
+- Fonts: Cormorant Garamond, Cinzel, Source Serif 4 and Caveat (SIL Open Font License), self-hosted in `site/ds/fonts/`.

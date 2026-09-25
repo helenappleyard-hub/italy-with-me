@@ -1,0 +1,41 @@
+/* Italy With Me — spacing, layout, radii, borders, elevation, motion. */
+:root{
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;
+  --space-6:32px;--space-7:48px;--space-8:64px;--space-9:96px;--space-10:128px;
+
+  --gutter:clamp(20px,5vw,48px);/* @kind spacing */
+  --section-y:clamp(56px,9vw,112px);/* @kind spacing */
+  --measure:62ch;/* @kind spacing */             /* max line length for body copy */
+  --container:1180px;/* @kind spacing */
+  --container-narrow:760px;/* @kind spacing */
+  --header-h:72px;/* @kind spacing */
+  --tap-min:44px;/* @kind spacing */             /* minimum touch target */
+
+  --radius-0:0;
+  --radius-1:2px;             /* buttons, Start/Finish tags */
+  --radius-2:4px;             /* fields, facts panel */
+  --radius-3:8px;             /* cards, tinted panels */
+  --radius-pill:999px;        /* season pill, numbered markers */
+
+  --border-w:1px;/* @kind spacing */
+  --rule:1px solid var(--border-rule);/* @kind other */
+  --rule-gold:1px solid var(--border-gold);/* @kind other */
+  --frame-double:3px double var(--iwm-olive-800);/* @kind other */  /* business-card style double frame */
+
+  /* Elevation: flat print by default; photos sit like mounted prints */
+  --shadow-none:none;
+  --shadow-card:0 1px 0 rgba(74,12,24,.04),0 2px 10px -4px rgba(74,40,20,.18);
+  --shadow-print:0 2px 4px rgba(60,40,20,.12),0 12px 28px -10px rgba(60,40,20,.35);
+  --shadow-raise:0 6px 22px -8px rgba(74,40,20,.32);
+
+  /* Imagery grade: approximates the baked "Florentine sepia" tone for images that haven't been processed */
+  --image-grade:sepia(.38) saturate(.82) hue-rotate(-6deg) contrast(.97) brightness(1.02);/* @kind other */
+
+  --focus-ring:0 0 0 2px var(--iwm-paper),0 0 0 4px var(--iwm-focus);/* @kind shadow */
+
+  --ease-out:cubic-bezier(.22,.61,.36,1);/* @kind other */
+  --dur-fast:120ms;/* @kind other */--dur-base:200ms;/* @kind other */--dur-slow:420ms;/* @kind other */
+}
+@media (prefers-reduced-motion:reduce){
+  :root{--dur-fast:0ms;/* @kind other */--dur-base:0ms;/* @kind other */--dur-slow:0ms;/* @kind other */}
+}

@@ -1,0 +1,80 @@
+/* Italy With Me — colour tokens.
+   Sampled from the supplied logo, business cards and brochures.
+   Contrast ratios noted are against --iwm-paper (#F6EEDC). */
+:root{
+  /* Paper (surfaces) */
+  --iwm-paper:#F6EEDC;        /* warm cream — page background */
+  --iwm-paper-deep:#EFE3C8;   /* aged paper — alternate bands */
+  --iwm-paper-light:#FBF7EE;  /* card / form field surface */
+  --iwm-paper-edge:#E2D3B3;   /* hairline on paper */
+
+  /* Ink (text) */
+  --iwm-ink:#2B221C;          /* 13.5:1 body text */
+  --iwm-ink-soft:#54463A;     /* 7.9:1 secondary text */
+  --iwm-ink-muted:#6B5B4D;    /* 5.6:1 captions, hints */
+
+  /* Burgundy / wine — headings, buttons, numbered markers */
+  --iwm-burgundy-900:#4A0C18;
+  --iwm-burgundy-800:#5E0F1E; /* 11.6:1 hover/pressed */
+  --iwm-burgundy-700:#7A1628; /* 9.2:1 primary */
+  --iwm-burgundy-100:#F1DDD0; /* rose tint panel */
+
+  /* Terracotta / rust — logo wordmark */
+  --iwm-rust-700:#8E2A16;     /* 7.3:1 */
+  --iwm-rust-600:#A3321C;     /* 6.0:1 accent text */
+  --iwm-terracotta-400:#C2603C; /* 3.6:1 — large display / decorative only */
+
+  /* Antique gold — vine, rules, frames (decorative) */
+  --iwm-gold-700:#7A5E22;     /* 5.3:1 — gold when used as text */
+  --iwm-gold-500:#B08A3E;     /* 2.8:1 — NEVER for text; rules & ornament */
+  --iwm-gold-200:#E3CF9E;
+
+  /* Olive — leaves, season pill, success */
+  --iwm-olive-800:#2F4A2E;    /* 8.5:1 forest green (script titles, card icons) */
+  --iwm-olive-700:#475428;    /* 7.1:1 */
+  --iwm-olive-600:#5A6A33;    /* 5.1:1 */
+  --iwm-olive-100:#E3E4CE;    /* season pill / private-tour panel */
+
+  /* Feedback */
+  --iwm-error:#9A2414;        /* 6.9:1 — always paired with icon + text */
+  --iwm-error-bg:#F6E0D6;
+  --iwm-success:#475428;
+  --iwm-success-bg:#E3E4CE;
+  --iwm-focus:#1F4E79;        /* ink-blue focus ring — distinct from all brand reds */
+  --iwm-white:#FFFFFF;
+
+  /* Semantic aliases */
+  --surface-page:var(--iwm-paper);
+  --surface-band:var(--iwm-paper-deep);
+  --surface-card:var(--iwm-paper-light);
+  --surface-inverse:var(--iwm-burgundy-700);
+  --surface-tint-rose:var(--iwm-burgundy-100);
+  --surface-tint-olive:var(--iwm-olive-100);
+
+  --text-body:var(--iwm-ink);
+  --text-secondary:var(--iwm-ink-soft);
+  --text-muted:var(--iwm-ink-muted);
+  --text-heading:var(--iwm-burgundy-700);
+  --text-accent:var(--iwm-rust-600);
+  --text-script:var(--iwm-olive-800);
+  --text-on-inverse:var(--iwm-paper);
+  --text-link:var(--iwm-burgundy-700);
+  --text-link-hover:var(--iwm-rust-700);
+
+  --border-hairline:var(--iwm-paper-edge);
+  --border-rule:rgba(122,22,40,.28);     /* burgundy rule */
+  --border-gold:var(--iwm-gold-500);
+  --border-field:#8A7A6A;                /* 3.4:1 non-text contrast on card */
+  --border-field-hover:var(--iwm-ink-soft);
+
+  --action-primary:var(--iwm-burgundy-700);
+  --action-primary-hover:var(--iwm-burgundy-800);
+  --action-primary-press:var(--iwm-burgundy-900);
+  --action-primary-text:var(--iwm-paper);
+  --action-secondary-text:var(--iwm-burgundy-700);
+  --action-secondary-hover-bg:rgba(122,22,40,.07);
+
+  --marker-bg:var(--iwm-burgundy-700);
+  --marker-text:var(--iwm-paper);
+  --ornament:var(--iwm-burgundy-700);
+}

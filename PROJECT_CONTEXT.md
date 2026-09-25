@@ -187,6 +187,10 @@ Lovable is the proposed initial website-building environment. Codex and other AI
 - **Privacy:** This repository is public. Never commit receipts, home address, account or customer numbers, payment details or other private documents. Receipts are kept in the git-ignored `Accounting/` folder.
 
 - **Confirmed (25 Sep 2026):** Hosting on GitHub Pages (free), deployed by GitHub Actions from the `site/` folder only. Main address is `italywithme.com.au` (`www` redirects to it); HTTPS enforced. Setup steps and GoDaddy DNS records are in `README.md`.
+- **Confirmed (25 Sep 2026):** Pages source set to GitHub Actions; holding page deployed. GoDaddy DNS updated (four GitHub Pages `A` records for `@`, `www` CNAME to `helenappleyard-hub.github.io`) and GitHub's DNS check passed. **TODO:** tick Enforce HTTPS once GitHub issues the certificate.
+- **Confirmed (25 Sep 2026):** First public page is the register-interest landing page from Claude Design ("Register Interest v4"). Helen confirmed the Helen photo is real and the copy ("an Australian from Perth", "learnt the language", "Italian spoken") is accurate. Sign-ups go to a Google Sheet via Google Apps Script (`apps-script/Code.gs`), which also emails helenappleyard@live.com.au. Helen approved the Privacy note as written.
+- **Confirmed (25 Sep 2026):** Sign-ups are live in the Google Sheet "Italy With Me – Bookings" ("Sign-ups" tab), via its Apps Script project deployed as a Web app (version 1, execute as Helen, access Anyone). `SIGNUP_ENDPOINT` in `site/js/signup.js` holds the `/exec` URL. Tested end to end from a local copy of the page on 25 Sep 2026 (sign-up, optional answers, invalid email); test rows deleted. Timestamps are in Perth time. Redeploy script changes as a new version of the same deployment so the URL does not change.
+- **Status (25 Sep 2026):** https://italywithme.com.au serves a valid certificate; the `www` certificate was not yet issued. **TODO:** tick Enforce HTTPS, confirm `www` redirects, and repeat the sign-up test on the live site.
 
 ### Proposed technical choices
 
@@ -287,7 +291,7 @@ A proposed enquiry form could collect name, email, preferred experience, approxi
 - [ ] Confirm tour details and the exact five wine-window stops.
 - [ ] Verify routes, meeting/finish points, map numbering, and forward arrows.
 - [ ] Confirm the technical stack, repository, domain, and hosting.
-- [ ] Choose enquiry/booking workflow and verify delivery.
+- [x] Choose enquiry/booking workflow and verify delivery (register-interest list via Google Sheet, tested 25 Sep 2026).
 - [ ] Confirm any applicable privacy and booking terms with the appropriate owner.
 - [ ] Check responsive layouts, accessibility, performance, and search metadata.
 - [ ] Remove unresolved public placeholders and obtain Helen’s approval before publishing.

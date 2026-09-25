@@ -1,0 +1,14 @@
+/* Italy With Me — base element styles. */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--surface-page);color:var(--text-body);font:var(--type-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,h4,.iwm-route__marker,.iwm-facts__value,.iwm-hero__title{font-variant-numeric:lining-nums}
+h1,h2,h3,h4{color:var(--text-heading);font-family:var(--font-display);margin:0;text-wrap:balance;letter-spacing:var(--ls-display)}
+p{margin:0;text-wrap:pretty}
+img{max-width:100%;display:block}
+a{color:var(--text-link);text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{color:var(--text-link-hover);text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--iwm-focus);outline-offset:3px;border-radius:2px}
+::selection{background:var(--iwm-burgundy-100);color:var(--iwm-burgundy-900)}
+.iwm-visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}

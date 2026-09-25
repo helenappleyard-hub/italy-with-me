@@ -1,0 +1,80 @@
+/* Landing page layout, recreated from Claude Design "Register Interest v4". */
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--surface-page); }
+a { color: var(--text-link); }
+a:hover { color: var(--text-link-hover); }
+[hidden] { display: none !important; }
+
+.page { min-height: 100vh; overflow-x: clip; display: flex; flex-direction: column; background: var(--surface-page); color: var(--text-body); font-family: var(--font-body); }
+
+.eyebrow { margin: 0; font-family: var(--font-caps); font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--text-accent); }
+.section-title { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: clamp(32px, 5vw, 46px); line-height: 1.1; color: var(--text-heading); text-wrap: balance; }
+
+/* Hero + sign-up card */
+.hero { padding: clamp(28px, 5vw, 48px) var(--gutter) 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-5); }
+.hero__intro { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); max-width: 640px; }
+.hero__title { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: clamp(40px, 7vw, 64px); line-height: 1.04; color: var(--text-heading); text-wrap: balance; }
+.hero__title em { font-style: italic; font-weight: 500; }
+.hero__skyline { display: block; width: calc(100% + 2 * var(--gutter)); max-width: none; margin: 0 calc(-1 * var(--gutter)); height: clamp(180px, 30vw, 360px); object-fit: cover; object-position: 58% 60%; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 78%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 78%, transparent 100%); }
+
+.signup { position: relative; width: 100%; max-width: 520px; background: var(--surface-card); border: 1px solid var(--border-hairline); border-radius: var(--radius-3); box-shadow: var(--shadow-card); padding: clamp(24px, 5vw, 36px); box-sizing: border-box; text-align: left; }
+.signup__step { display: flex; flex-direction: column; gap: var(--space-5); }
+.signup__step:focus { outline: none; }
+.signup__perks { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--space-4); }
+.signup__perk { display: flex; align-items: center; gap: var(--space-3); font-size: 15px; line-height: 1.3; font-weight: 600; }
+.icon-disc { flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--surface-tint-olive); color: var(--iwm-olive-800); display: flex; align-items: center; justify-content: center; }
+.icon-disc--lg { width: 56px; height: 56px; }
+.signup__form { display: flex; flex-direction: column; gap: var(--space-4); }
+.signup__fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-4); }
+.signup__small { margin: 0; font-size: 13px; line-height: 1.5; color: var(--text-muted); text-align: center; }
+.signup__notice { margin: 0; padding: 12px 14px; border-radius: var(--radius-2); background: var(--surface-tint-rose); color: var(--text-body); font-size: var(--fs-small); line-height: 1.5; }
+.signup__heading { display: flex; flex-direction: column; gap: var(--space-1); }
+.signup__done { align-items: center; text-align: center; gap: var(--space-4); }
+.signup__thanks { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 5vw, 38px); line-height: 1.1; color: var(--text-heading); }
+.signup__lede { margin: 0; font-size: 16px; line-height: 1.5; color: var(--text-secondary); }
+.signup__lede strong { color: var(--text-body); font-weight: 600; }
+.signup__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); }
+/* Honeypot: hidden from people, visible to naive bots. */
+.signup__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* What to expect */
+.expect { padding: var(--space-6) var(--gutter) var(--space-8); display: flex; justify-content: center; }
+.expect__grid { width: 100%; max-width: 880px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-6) var(--space-5); margin: 0; padding: 0; list-style: none; }
+.expect__item { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); text-align: center; font-family: var(--font-caps); font-size: 13px; letter-spacing: .16em; text-transform: uppercase; line-height: 1.4; color: var(--text-body); }
+.expect__ring { width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--border-gold); color: var(--iwm-burgundy-700); display: flex; align-items: center; justify-content: center; }
+
+/* Polaroids */
+.taste { padding: 0 var(--gutter) var(--section-y); display: flex; justify-content: center; }
+.taste__row { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-6); }
+.polaroid { margin: 0; background: var(--surface-card); padding: 10px 10px 6px; box-shadow: var(--shadow-print); display: flex; flex-direction: column; align-items: center; gap: 2px; width: 180px; box-sizing: border-box; }
+.polaroid img { display: block; width: 160px; height: 160px; object-fit: cover; }
+.polaroid--a { transform: rotate(-1.5deg); }
+.polaroid--b { transform: rotate(1deg); }
+.polaroid--c { transform: rotate(-1deg); }
+
+/* Walks */
+.walks { background: var(--surface-band); padding: var(--section-y) var(--gutter); display: flex; flex-direction: column; align-items: center; gap: var(--space-7); }
+.walks__head { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); text-align: center; }
+.walks__grid { width: 100%; max-width: 1000px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6); }
+
+/* Helen */
+.helen { padding: var(--section-y) var(--gutter); display: flex; justify-content: center; }
+.helen__grid { width: 100%; max-width: 880px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(32px, 6vw, 72px); align-items: center; }
+.helen__figure { margin: 0; justify-self: center; width: 100%; max-width: 360px; }
+.helen__print { background: var(--surface-card); padding: 12px 12px 14px; box-shadow: var(--shadow-print); transform: rotate(-1.2deg); width: 100%; box-sizing: border-box; }
+.helen__photo { display: block; width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; object-position: 50% 20%; }
+.helen__text { display: flex; flex-direction: column; gap: var(--space-4); }
+.helen__compass { display: block; width: 72px; height: 72px; object-fit: cover; object-position: 50% 48%; mix-blend-mode: multiply; -webkit-mask-image: radial-gradient(circle at center, #000 52%, transparent 70%); mask-image: radial-gradient(circle at center, #000 52%, transparent 70%); }
+.helen__bio { margin: 0; font-size: 18px; line-height: 1.6; max-width: 34ch; text-wrap: pretty; }
+
+/* Burgundy CTA band */
+.cta { background: var(--surface-inverse); color: var(--text-on-inverse); padding: clamp(48px, 8vw, 88px) var(--gutter); display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-5); }
+.cta__title { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 5vw, 44px); line-height: 1.1; color: var(--text-on-inverse); max-width: 20ch; text-wrap: balance; }
+
+/* Privacy note */
+.privacy { padding: var(--space-7) var(--gutter); display: flex; justify-content: center; }
+.privacy__inner { max-width: var(--container-narrow); display: flex; flex-direction: column; gap: var(--space-3); font-size: var(--fs-small); line-height: 1.6; color: var(--text-secondary); }
+.privacy__title { margin: 0; font-family: var(--font-caps); font-weight: 500; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--text-accent); }
+
+/* Footer extras */
+.footer__vignette { display: block; width: 100%; max-width: 340px; height: auto; mix-blend-mode: multiply; -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 76%); mask-image: radial-gradient(ellipse at center, #000 55%, transparent 76%); }
