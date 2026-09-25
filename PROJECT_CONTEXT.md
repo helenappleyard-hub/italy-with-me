@@ -186,15 +186,15 @@ Lovable is the proposed initial website-building environment. Codex and other AI
 - **Constraint:** Do not add, edit or delete MX, autodiscover or email-related TXT (SPF/DKIM) records when changing website DNS unless Helen asks.
 - **Privacy:** This repository is public. Never commit receipts, home address, account or customer numbers, payment details or other private documents. Receipts are kept in the git-ignored `Accounting/` folder.
 
+- **Confirmed (25 Sep 2026):** Hosting on GitHub Pages (free), deployed by GitHub Actions from the `site/` folder only. Main address is `italywithme.com.au` (`www` redirects to it); HTTPS enforced. Setup steps and GoDaddy DNS records are in `README.md`.
+
 ### Proposed technical choices
 
-- **Proposed:** Hosting on GitHub Pages (free) with `italywithme.com.au` as the custom domain and HTTPS enforced.
 - **Proposed:** Booking/interest requests stored in a Google Sheet via a Google Apps Script web app, which also emails each request to helenappleyard@live.com.au (free; the Microsoft route would need paid Power Automate).
 
 ### Undecided technical choices
 
 - **TODO:** Framework, language, styling approach, and package manager.
-- **TODO:** Canonical URL (`italywithme.com.au` vs `www.italywithme.com.au`).
 - **TODO:** Content editing approach or CMS, if needed.
 - **TODO:** Map provider and route presentation method.
 - **TODO:** Spam protection beyond a honeypot field.
