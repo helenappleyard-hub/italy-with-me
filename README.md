@@ -19,10 +19,19 @@ Page-specific layout is in `site/css/page.css`; the form logic is in
 
 ### Connecting sign-ups to a Google Sheet (done once, by Helen)
 
-Until this is done, the form checks the email address and then asks visitors
+**Status (25 Sep 2026): done.** The live Sheet is **Italy With Me – Bookings**
+(sign-ups go to its "Sign-ups" tab). The script is deployed as a web app
+(version 1) and its URL is set in `site/js/signup.js`. If `SIGNUP_ENDPOINT`
+is ever emptied, the form checks the email address and then asks visitors
 to email Helen directly; nothing is saved.
 
-1. In Google Drive, create a new Google Sheet called **Italy With Me sign-ups**.
+To update the script later, paste the new `Code.gs` into the Sheet's Apps
+Script project and use **Deploy → Manage deployments → Edit → New version**,
+so the URL stays the same. A new deployment gives a new URL.
+
+Original setup steps, for reference:
+
+1. In Google Drive, create a new Google Sheet (the live one is **Italy With Me – Bookings**).
 2. In the Sheet: **Extensions → Apps Script**. Delete what is there and paste
    in the whole of `apps-script/Code.gs`. Click **Save**.
 3. Click **Deploy → New deployment**. Click the cog next to "Select type" and

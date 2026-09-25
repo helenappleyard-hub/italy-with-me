@@ -6,7 +6,7 @@
   'use strict';
 
   // Paste the Apps Script web app URL here (ends in /exec) once it is deployed.
-  var SIGNUP_ENDPOINT = '';
+  var SIGNUP_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyLHx2l3xECPzUCGffrI_vmIAWlsPQf3xBqUzPapim-gpxSuQw04793RHHCj1tkCMzK/exec';
 
   var HELEN_EMAIL = 'helenappleyard@live.com.au';
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
