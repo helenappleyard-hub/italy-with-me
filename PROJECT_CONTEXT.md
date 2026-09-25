@@ -190,7 +190,10 @@ Lovable is the proposed initial website-building environment. Codex and other AI
 - **Confirmed (25 Sep 2026):** Pages source set to GitHub Actions; holding page deployed. GoDaddy DNS updated (four GitHub Pages `A` records for `@`, `www` CNAME to `helenappleyard-hub.github.io`) and GitHub's DNS check passed. **TODO:** tick Enforce HTTPS once GitHub issues the certificate.
 - **Confirmed (25 Sep 2026):** First public page is the register-interest landing page from Claude Design ("Register Interest v4"). Helen confirmed the Helen photo is real and the copy ("an Australian from Perth", "learnt the language", "Italian spoken") is accurate. Sign-ups go to a Google Sheet via Google Apps Script (`apps-script/Code.gs`), which also emails helenappleyard@live.com.au. Helen approved the Privacy note as written.
 - **Confirmed (25 Sep 2026):** Sign-ups are live in the Google Sheet "Italy With Me – Bookings" ("Sign-ups" tab; https://docs.google.com/spreadsheets/d/1bcByb_Yr_XEcg9611dfM7jGlbDAldhArNark5-ThVg8/edit), via its Apps Script project (https://script.google.com/u/0/home/projects/1FyO7YPKUfSj8sjZAJUypRujrPFt2d8dK9kfAhLOeeJICGyzqhCvoNLkj/edit) deployed as a Web app (version 1, execute as Helen, access Anyone). `SIGNUP_ENDPOINT` in `site/js/signup.js` holds the `/exec` URL. Tested end to end from a local copy of the page on 25 Sep 2026 (sign-up, optional answers, invalid email); test rows deleted. Timestamps are in Perth time. Redeploy script changes as a new version of the same deployment so the URL does not change.
-- **Status (25 Sep 2026):** https://italywithme.com.au serves a valid certificate; the `www` certificate was not yet issued. **TODO:** tick Enforce HTTPS, confirm `www` redirects, and repeat the sign-up test on the live site.
+- **Confirmed (25 Sep 2026): live launch verified.** Enforce HTTPS is on. https://italywithme.com.au serves a valid Let's Encrypt certificate; http://italywithme.com.au and http://www.italywithme.com.au both 301 to https://italywithme.com.au/. On the live site at 1366px and 390px: all images load, no horizontal scroll, `#join` and `#privacy` links work, no console errors or failed requests. Live sign-up tests passed (with answers, with Skip, and an invalid email that saves nothing). Test rows are to be deleted by hand from the Sheet.
+- **TODO:** https://www.italywithme.com.au still presents GitHub's shared `*.github.io` certificate (browser warning). Wait for GitHub to issue it; if still missing about 24 hours after Enforce HTTPS was ticked, remove and re-add the custom domain in Settings → Pages (ask Helen first), then re-tick Enforce HTTPS.
+- **TODO:** Helen to confirm the sign-up notification emails reach helenappleyard@live.com.au (check Junk).
+- **Known, not fixed:** the notification email body in `apps-script/Code.gs` refers to the Sheet as "Italy With Me sign-ups" (real name "Italy With Me – Bookings"). Changing it needs a new script version deployed in Helen's Google account.
 
 ### Proposed technical choices
 
@@ -293,5 +296,5 @@ A proposed enquiry form could collect name, email, preferred experience, approxi
 - [ ] Confirm the technical stack, repository, domain, and hosting.
 - [x] Choose enquiry/booking workflow and verify delivery (register-interest list via Google Sheet, tested 25 Sep 2026).
 - [ ] Confirm any applicable privacy and booking terms with the appropriate owner.
-- [ ] Check responsive layouts, accessibility, performance, and search metadata.
+- [x] Check responsive layouts, accessibility, performance, and search metadata (live site verified at 1366px and 390px, 25 Sep 2026).
 - [ ] Remove unresolved public placeholders and obtain Helen’s approval before publishing.
