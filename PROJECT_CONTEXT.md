@@ -193,7 +193,7 @@ Lovable is the proposed initial website-building environment. Codex and other AI
 - **Confirmed (25 Sep 2026): live launch verified.** Enforce HTTPS is on. https://italywithme.com.au serves a valid Let's Encrypt certificate; http://italywithme.com.au and http://www.italywithme.com.au both 301 to https://italywithme.com.au/. On the live site at 1366px and 390px: all images load, no horizontal scroll, `#join` and `#privacy` links work, no console errors or failed requests. Live sign-up tests passed (with answers, with Skip, and an invalid email that saves nothing). Test rows are to be deleted by hand from the Sheet.
 - **TODO:** https://www.italywithme.com.au still presents GitHub's shared `*.github.io` certificate (browser warning). Wait for GitHub to issue it; if still missing about 24 hours after Enforce HTTPS was ticked, remove and re-add the custom domain in Settings → Pages (ask Helen first), then re-tick Enforce HTTPS.
 - **TODO:** Helen to confirm the sign-up notification emails reach helenappleyard@live.com.au (check Junk).
-- **Known, not fixed:** the notification email body in `apps-script/Code.gs` refers to the Sheet as "Italy With Me sign-ups" (real name "Italy With Me – Bookings"). Changing it needs a new script version deployed in Helen's Google account.
+- **Fixed in code (30 Sep 2026), awaiting redeploy:** the notification email body in `apps-script/Code.gs` now names the Sheet "Italy With Me – Bookings" (it used to say "Italy With Me sign-ups"). The live email only changes once Helen pastes the new script and deploys it as a new version of the existing deployment.
 
 ### Proposed technical choices
 

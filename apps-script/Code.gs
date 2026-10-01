@@ -1,7 +1,7 @@
 /**
  * Italy With Me: register-interest sign-ups.
  *
- * Paste into Extensions > Apps Script of Helen's "Italy With Me sign-ups"
+ * Paste into Extensions > Apps Script of Helen's "Italy With Me – Bookings"
  * Google Sheet, then Deploy > New deployment > Web app
  * (Execute as: Me, Who has access: Anyone). Put the /exec URL into
  * SIGNUP_ENDPOINT in site/js/signup.js. Full steps are in README.md.
@@ -47,7 +47,7 @@ function saveSignup_(data) {
     to: NOTIFY_EMAIL,
     subject: 'New Italy With Me sign-up: ' + (name || email),
     body: 'Someone joined the list.\n\nName: ' + (name || '(not given)') + '\nEmail: ' + email +
-      '\n\nAll sign-ups are in your "Italy With Me sign-ups" Google Sheet.'
+      '\n\nAll sign-ups are in your "Italy With Me – Bookings" Google Sheet.'
   });
   return { ok: true, id: id };
 }
