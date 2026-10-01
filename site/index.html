@@ -22,25 +22,27 @@
   <link rel="stylesheet" href="ds/components/components.css">
   <link rel="stylesheet" href="css/page.css">
   <script src="js/signup.js" defer></script>
+  <script src="js/slides.js" defer></script>
 </head>
 <body>
 <!-- Fleur-de-lys ornament by Lorc (game-icons.net), CC BY 3.0. Icons: Lucide (ISC). -->
 <main class="page">
 
   <section id="join" class="hero" aria-labelledby="hero-title">
-    <span class="iwm-logo" style="height:96px"><img src="images/logo.webp" alt="Italy With Me" width="144" height="96" style="height:96px;width:auto"></span>
+    <span class="iwm-logo" style="display:block;width:360px;max-width:100%"><img src="images/logo.webp" alt="Italy With Me" width="360" height="240" style="display:block;width:100%;height:auto"></span>
     <div class="hero__intro">
-      <p class="eyebrow">Private walks in Florence</p>
-      <h1 id="hero-title" class="hero__title">Let me show you my <em lang="it">Firenze</em>.</h1>
+      <p class="eyebrow">Personal walks, tours and experiences in Florence</p>
+      <p class="eyebrow">Private and small groups</p>
+      <h1 id="hero-title" class="hero__title">Let me show you the real <em lang="it">Firenze</em>.</h1>
       <div class="iwm-divider iwm-divider--short" role="presentation" aria-hidden="true"><svg class="iwm-fleur" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M256 24c-31.466 48-62.932 96-62.932 160c0 56.794 37.144 113.568 45.514 148h34.836c8.37-34.432 45.514-91.206 45.514-148c0-64-31.466-112-62.932-160M98.637 206c-47.2 0-78.664 32-78.664 80c0 32 22.115 63.526 62.93 64c-15.732-16 .002-64 31.468-64c31.890 0 56.58 21.916 69.253 46h33.828c-13.744-47.52-49.108-126-118.813-126zm314.726 0c-69.705 0-105.070 78.48-118.814 126h33.827c12.673-24.084 37.362-46 69.252-46c31.465 0 47.2 48 31.466 64c40.816-.474 62.930-32 62.930-64c0-48-31.464-80-78.663-80zM153.076 350c-38.705 0-54.440 16-54.440 48c0 16 15.734 48 47.2 48c35.4 0 61.948-27 73.010-54h-35.682c-4.657 3.570-11.5 6-21.596 6c-15.733 0-31.464-32-8.492-48m37.694 0c.017.064.03.127.048.19c-13.29 2.16-12.694 23.343 1.793 23.79v.02H319.390l-.003-.02c14.486-.447 15.083-21.630 1.792-23.790c.017-.063.03-.126.048-.19zm168.154 0c22.972 16 7.24 48-8.492 48c-10.096 0-16.940-2.430-21.596-6h-35.682c11.062 27 37.610 54 73.010 54c31.466 0 47.2-32 47.2-48c0-32-15.735-48-54.440-48m-118.656 42c-15.733 16-15.734 48-31.467 64l31.468-16c0 16 0 32 15.732 48c15.733-16 15.732-32 15.732-48l31.467 16c-15.734-16-15.735-48-31.468-64z"/></svg></div>
+      <p class="hero__lead">Skip the queues and the crowded tour groups.<br>With Helen as your guide, discover the Florence locals love, and meet the people who make it special.</p>
     </div>
 
     <div class="signup">
       <!-- Step 1: name + email -->
       <div class="signup__step" data-step="form">
         <div class="signup__perks">
-          <div class="signup__perk"><span class="icon-disc"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4" /> <path d="M16 2v4" /> <rect width="18" height="18" x="3" y="4" rx="2" /> <path d="M3 10h18" /></svg></span><span>First pick of dates</span></div>
-          <div class="signup__perk"><span class="icon-disc"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /></svg></span><span>Curated experiences</span></div>
+          <div class="signup__perk"><span class="icon-disc"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4" /> <path d="M16 2v4" /> <rect width="18" height="18" x="3" y="4" rx="2" /> <path d="M3 10h18" /></svg></span><span class="signup__perk-text"><span>2027 Dates</span><span class="signup__perk-sub">April, May, October, November and early December</span></span></div>
         </div>
         <form class="signup__form" id="signup-form" novalidate>
           <div class="signup__fields">
@@ -59,7 +61,7 @@
             <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
           </div>
           <p class="signup__notice" id="signup-notice" role="alert" hidden></p>
-          <button type="submit" class="iwm-btn iwm-btn--primary iwm-btn--lg iwm-btn--block"><span>Join the list</span></button>
+          <button type="submit" class="iwm-btn iwm-btn--primary iwm-btn--lg iwm-btn--block"><span>Contact me</span></button>
           <p class="signup__small">Occasional emails. Unsubscribe any time. <a href="#privacy">Privacy</a></p>
         </form>
       </div>
@@ -73,15 +75,15 @@
         <form class="signup__form" id="details-form">
           <div class="iwm-field">
                 <label class="iwm-field__label" for="when">When?<span class="iwm-field__opt">(optional)</span></label>
-                <div class="iwm-field__select"><select id="when" name="when" class="iwm-field__control"><option value="">Not sure yet</option><option value="soon">Within 6 months</option><option value="year">In 6–12 months</option><option value="later">Later</option></select><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></div>
+                <div class="iwm-field__select"><select id="when" name="when" class="iwm-field__control"><option value="">Not sure yet</option><option value="apr-2027">April 2027</option><option value="may-2027">May 2027</option><option value="oct-2027">October 2027</option><option value="nov-2027">November 2027</option><option value="dec-2027">1 to 7 December 2027</option></select><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></div>
               </div>
           <div class="iwm-field">
                 <label class="iwm-field__label" for="who">Who’s coming?<span class="iwm-field__opt">(optional)</span></label>
                 <div class="iwm-field__select"><select id="who" name="who" class="iwm-field__control"><option value="">Not sure yet</option><option value="solo">Just me</option><option value="partner">My partner</option><option value="friends">A friend or two</option><option value="group">A small group</option></select><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></div>
               </div>
           <div class="iwm-field">
-                <label class="iwm-field__label" for="walk">Which walk?<span class="iwm-field__opt">(optional)</span></label>
-                <div class="iwm-field__select"><select id="walk" name="walk" class="iwm-field__control"><option value="">Both sound lovely</option><option value="artisans">The Hidden Artisans of Santo Spirito</option><option value="wine">Florence Wine Window Tour</option></select><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></div>
+                <label class="iwm-field__label" for="walk">Tell me what you would like to do<span class="iwm-field__opt">(optional)</span></label>
+                <div class="iwm-field__select"><select id="walk" name="walk" class="iwm-field__control"><option value="">A bit of everything</option><option value="artisans">The Hidden Artisans of Santo Spirito</option><option value="wine">Florence Wine Window Tour</option><option value="workshops">Workshops</option><option value="experiences">Experiences</option></select><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></div>
               </div>
           <div class="signup__actions">
             <button type="submit" class="iwm-btn iwm-btn--primary"><span>Send</span></button>
@@ -106,10 +108,11 @@
 
   <section class="expect" aria-label="What to expect">
     <ul class="expect__grid">
-      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></span>Private</li>
+      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></svg></span>Private tours</li>
+      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></span>Group tours</li>
       <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" /> <path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" /> <path d="M16 17h4" /> <path d="M4 13h4" /></svg></span>Your pace</li>
-      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg></span>Italian spoken</li>
-      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3" /> <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" /> <circle cx="18" cy="5" r="3" /></svg></span>Planned around you</li>
+      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg></span>English spoken</li>
+      <li class="expect__item"><span class="expect__ring"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3" /> <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" /> <circle cx="18" cy="5" r="3" /></svg></span>Tailored tours</li>
     </ul>
   </section>
 
@@ -117,32 +120,120 @@
     <div class="taste__row">
       <figure class="polaroid polaroid--a"><img src="images/polaroid-pasta.webp" alt="Hands shaping fresh pasta" width="171" height="182" loading="lazy"><span class="iwm-script iwm-script--sm">Pasta fresca</span></figure>
       <figure class="polaroid polaroid--b"><img src="images/polaroid-perfume.webp" alt="Glass perfume bottles in a Florentine shop" width="181" height="154" loading="lazy"><span class="iwm-script iwm-script--sm">Profumo</span></figure>
-      <figure class="polaroid polaroid--c"><img src="images/polaroid-tuscany.webp" alt="Tuscan hills with cypress trees at golden hour" width="195" height="183" loading="lazy"><span class="iwm-script iwm-script--sm">Toscana</span></figure>
+      <figure class="polaroid polaroid--c"><img src="images/polaroid-tuscany.webp" alt="Tuscan hills with cypress trees at golden hour" width="195" height="183" loading="lazy"><span class="iwm-script iwm-script--sm">Toscana by e-bike</span></figure>
+      <figure class="polaroid polaroid--b"><img src="images/polaroid-artisan.webp" alt="An artisan at his workbench in Florence" width="360" height="360" loading="lazy"><span class="iwm-script iwm-script--sm">Artisan crafts</span></figure>
+      <figure class="polaroid polaroid--a"><img src="images/polaroid-wine-vino.webp" alt="An arched stone wine window with a small wooden door, carved with the word Vino" width="360" height="360" loading="lazy"><span class="iwm-script iwm-script--sm">Wine windows</span></figure>
+      <figure class="polaroid polaroid--c"><img src="images/polaroid-food.webp" alt="Freshly made pasta at a Tuscan cooking class" width="360" height="360" loading="lazy"><span class="iwm-script iwm-script--sm">Delicious food</span></figure>
+      <figure class="polaroid polaroid--b"><img src="images/polaroid-jewellery-shop.webp" alt="The window of an artisan goldsmith’s shop in Florence" width="360" height="360" loading="lazy"><span class="iwm-script iwm-script--sm">Jewellery</span></figure>
+      <figure class="polaroid polaroid--a"><img src="images/polaroid-friends.webp" alt="Three friends laughing together behind a Florentine bar" width="360" height="360" loading="lazy"><span class="iwm-script iwm-script--sm">Make new friends</span></figure>
+      <figure class="polaroid polaroid--c"><img src="images/polaroid-night-7734.webp" alt="A guest with arms wide open under strings of Christmas lights in a Florence street at night" width="360" height="360" loading="lazy"><span class="iwm-script iwm-script--sm"><span lang="it">Firenze</span> by night</span></figure>
+      <figure class="polaroid polaroid--b"><img src="images/polaroid-truffles-2002.webp" alt="A smiling guest holding up a freshly found truffle in the woods, with the truffle dog at her feet" width="360" height="360" loading="lazy"><span class="iwm-script iwm-script--sm">Hunt for truffles</span></figure>
     </div>
   </section>
 
   <section class="walks" aria-labelledby="walks-title">
     <div class="walks__head">
       <p class="eyebrow">The walks</p>
-      <h2 id="walks-title" class="section-title">Two I can’t wait to share</h2>
+      <h2 id="walks-title" class="section-title">Popular tours I can’t wait to share</h2>
     </div>
     <div class="walks__grid">
       <article class="iwm-exp-card">
-          <div class="iwm-exp-card__media"><img src="images/artisan.webp" alt="A leather artisan at work in a Florentine workshop" width="720" height="960" loading="lazy"></div>
+          <div class="iwm-exp-card__media slides" data-slides role="region" aria-roledescription="carousel" aria-label="Photos from the Oltrarno workshops">
+            <div class="slides__track" tabindex="0">
+              <img style="object-position: center 20%;" src="images/oltrarno-1184d.webp" alt="A Florentine silversmith working a delicate piece with a blue flame at his bench" width="720" height="960">
+              <img src="images/artisan.webp" alt="A leather artisan at work in a Florentine workshop" width="720" height="960" loading="lazy">
+              <img src="images/oltrarno-1176d.webp" alt="A craftsman bent over his bench in an Oltrarno workshop" width="720" height="960" loading="lazy">
+              <img src="images/oltrarno-1199d.webp" alt="A fine engraving seen through a magnifying glass" width="720" height="960" loading="lazy">
+              <img src="images/oltrarno-hats-7456.webp" alt="A milliner’s window filled with handmade hats in burgundy, red and leopard print" width="720" height="960" loading="lazy">
+              <img style="object-position: center 25%;" src="images/oltrarno-1218d.webp" alt="A Florentine craftsman hand-painting and gilding a carved candlestick in his frame workshop" width="720" height="960" loading="lazy">
+              <img src="images/oltrarno-1205d.webp" alt="A Florentine tea shop lined floor to ceiling with green tea tins on sage shelves" width="720" height="960" loading="lazy">
+              <img src="images/oltrarno-nutcrackers-1791.webp" alt="A Christmas stall crowded with painted wooden nutcrackers and glass baubles" width="720" height="960" loading="lazy">
+              <img src="images/oltrarno-greengrocer-2325.webp" alt="Wooden crates of zucchini flowers, tomatoes, peppers and aubergines at a neighbourhood greengrocer" width="720" height="960" loading="lazy">
+              <img style="object-position: center 30%;" src="images/oltrarno-flordecor-2331.webp" alt="A smiling guest stepping out of the doorway of a Florentine home fragrance shop, framed by hydrangeas and ferns" width="720" height="960" loading="lazy">
+              <img src="images/experiences.webp" alt="A guest stepping into a narrow Florentine shop filled with treasures" width="720" height="960" loading="lazy">
+            </div>
+            <button type="button" class="slides__btn slides__btn--prev" aria-label="Previous photo"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+            <button type="button" class="slides__btn slides__btn--next" aria-label="Next photo"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+            <div class="slides__dots"></div>
+          </div>
           <div class="iwm-exp-card__body">
             <p class="iwm-eyebrow">Oltrarno</p>
             <h3 class="iwm-exp-card__title"><a href="#join">The Hidden Artisans of Santo Spirito</a></h3>
             <p class="iwm-exp-card__text">Real makers. Authentic crafts.</p>
-            <div class="iwm-exp-card__foot"><a href="#join" class="iwm-btn iwm-btn--text" aria-label="Join the list: The Hidden Artisans of Santo Spirito"><span>Join the list</span><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a></div>
+            <p class="iwm-exp-card__text walk-body">Cross the Arno into the <em lang="it">Oltrarno</em>, where Florence still works with its hands. In the lanes around Piazza Santo Spirito, workshop doors stand open and you can smell the leather and hear the tap of tools. We step inside to meet the local artisans who still make perfume, handbags, shoes and fashion the slow way, the way Florentines have for centuries. Find a treasure you love, and buy it from the person who made it.</p>
+            <p class="walk-detail">2 to 4 hours · Private or small groups · In English</p>
+            <div class="iwm-exp-card__foot"><a href="#join" class="iwm-btn iwm-btn--text" data-walk="artisans" aria-label="Contact me: The Hidden Artisans of Santo Spirito"><span>Contact me</span><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a></div>
           </div>
         </article>
       <article class="iwm-exp-card">
-          <div class="iwm-exp-card__media"><img src="images/wine.webp" alt="A small arched wine window set into a stone wall" width="720" height="960" loading="lazy"></div>
+          <div class="iwm-exp-card__media slides" data-slides role="region" aria-roledescription="carousel" aria-label="Photos of Florence’s wine windows">
+            <div class="slides__track" tabindex="0">
+              <img src="images/wine-window-glass.webp" alt="A hand passing a glass of red wine through a wine window beneath a green Buchetta del Vino sign" width="480" height="640" loading="lazy">
+              <img src="images/wine-window.webp" alt="An arched stone wine window with a wooden door, carved with the word Vino" width="720" height="960" loading="lazy">
+              <img src="images/wine-window-open.webp" alt="An open wine window with its wooden door swung back, showing a bar and wine bottles inside" width="600" height="800" loading="lazy">
+              <img src="images/wine-window-fiasco.webp" alt="A straw-wrapped Chianti flask waiting in an arched stone wine window" width="600" height="800" loading="lazy">
+              <img src="images/wine-window-vine.webp" alt="A wine window with its little door open, a bronze bell and a grapevine display with two bottles of Chianti" width="480" height="640" loading="lazy">
+            </div>
+            <button type="button" class="slides__btn slides__btn--prev" aria-label="Previous photo"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+            <button type="button" class="slides__btn slides__btn--next" aria-label="Next photo"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+            <div class="slides__dots"></div>
+          </div>
           <div class="iwm-exp-card__body">
             <p class="iwm-eyebrow">Across the city</p>
             <h3 class="iwm-exp-card__title"><a href="#join">Florence Wine Window Tour</a></h3>
             <p class="iwm-exp-card__text">Small windows. Big stories.</p>
-            <div class="iwm-exp-card__foot"><a href="#join" class="iwm-btn iwm-btn--text" aria-label="Join the list: Florence Wine Window Tour"><span>Join the list</span><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a></div>
+            <p class="iwm-exp-card__text walk-body">Join me as we explore some of Florence’s renowned wine windows, or <em lang="it">buchette del vino</em>. These tiny centuries-old openings were built into the walls of Florentine palazzi, allowing noble families to sell wine from their vineyards directly to people on the street. Today, a handful have come back to life, offering a charming glimpse into Florence’s past and, of course, a glass or two of wine along the way.</p>
+            <p class="walk-detail">2 hours · Private or small groups · In English</p>
+            <div class="iwm-exp-card__foot"><a href="#join" class="iwm-btn iwm-btn--text" data-walk="wine" aria-label="Contact me: Florence Wine Window Tour"><span>Contact me</span><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a></div>
+          </div>
+        </article>
+      <article class="iwm-exp-card">
+          <div class="iwm-exp-card__media slides" data-slides role="region" aria-roledescription="carousel" aria-label="Photos from the workshops">
+            <div class="slides__track" tabindex="0">
+              <img style="object-position: center 30%;" src="images/workshops.webp" alt="A guest blending her own perfume at a workshop bench lined with bottles" width="720" height="960" loading="lazy">
+              <img style="object-position: center 15%;" src="images/workshop-pottery-7451.webp" alt="A smiling guest at the potter’s wheel with the bowl she has just thrown" width="720" height="960" loading="lazy">
+              <img style="object-position: center 20%;" src="images/workshop-jewellery-1268d.webp" alt="A guest at a jeweller’s bench carving a ring design in wax" width="720" height="960" loading="lazy">
+              <img style="object-position: center 10%;" src="images/workshop-pasta-1920d.webp" alt="Two smiling guests behind a table of handmade spaghetti, striped ravioli and tortellini" width="720" height="960" loading="lazy">
+              <img src="images/workshop-sculpture-7151.webp" alt="A guest sculpting a small clay torso with fine tools in a Florentine studio" width="720" height="960" loading="lazy">
+              <img src="images/workshop-pasta-9644-v2.webp" alt="Two guests in aprons laughing as they hold up freshly cut pasta at a marble kitchen bench" width="720" height="960" loading="lazy">
+            </div>
+            <button type="button" class="slides__btn slides__btn--prev" aria-label="Previous photo"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+            <button type="button" class="slides__btn slides__btn--next" aria-label="Next photo"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+            <div class="slides__dots"></div>
+          </div>
+          <div class="iwm-exp-card__body">
+            <p class="iwm-eyebrow">Hands on</p>
+            <h3 class="iwm-exp-card__title"><a href="#join">Workshops</a></h3>
+            <p class="iwm-exp-card__text">Made in Florence. Treasured at home.</p>
+            <p class="iwm-exp-card__text walk-body">Roll up your sleeves and learn from Florence’s makers. Blend your own fragrance, shape clay on the wheel, craft a piece of jewellery, swirl colour into marbled paper, stitch a leather wallet or try your hand at silk weaving. In the kitchen, roll fresh pasta by hand and layer a classic <span lang="it">tiramisù</span>, with a glass of wine to enjoy while you cook. You leave with more than a souvenir: something you made yourself, and a story to go with it.</p>
+            <p class="walk-detail">Private or small groups · In English</p>
+            <div class="iwm-exp-card__foot"><a href="#join" class="iwm-btn iwm-btn--text" data-walk="workshops" aria-label="Contact me: Workshops"><span>Contact me</span><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a></div>
+          </div>
+        </article>
+      <article class="iwm-exp-card">
+          <div class="iwm-exp-card__media slides" data-slides role="region" aria-roledescription="carousel" aria-label="Photos from the experiences">
+            <div class="slides__track" tabindex="0">
+              <img src="images/experience-ebike-9711.webp" alt="A smiling rider on an e-bike in a cobbled Florentine street" width="720" height="960" loading="lazy">
+              <img src="images/experience-horse-7492.webp" alt="A smiling rider on a chestnut horse on a woodland trail in the Tuscan hills" width="720" height="960" loading="lazy">
+              <img style="object-position: center 20%;" src="images/experience-view-9767.webp" alt="The Duomo and terracotta rooftops of Florence seen from the green hills above the city" width="720" height="960" loading="lazy">
+              <img style="object-position: center 40%;" src="images/experience-sunset-2204.webp" alt="A guest leaning on a stone balustrade, watching the sun set over the Arno valley and the hills beyond Florence" width="720" height="960" loading="lazy">
+              <img style="object-position: center 65%;" src="images/experience-springs-0946.webp" alt="Three smiling friends with mud on their faces, soaking in a milky thermal pool below a limestone waterfall in Tuscany" width="720" height="960" loading="lazy">
+              <img src="images/experience-market-7716.webp" alt="A guest holding bunches of bright flowers at the Christmas market in Piazza Santa Croce" width="720" height="960" loading="lazy">
+              <img style="object-position: center 20%;" src="images/experience-florist-7711.webp" alt="A smiling florist holding two bright bouquets wrapped in yellow paper, surrounded by flowers" width="720" height="960" loading="lazy">
+              <img src="images/experience-food-1258d.webp" alt="A local leaning on the counter of a Florentine street food window hung with chillies and handwritten menus" width="720" height="960" loading="lazy">
+              <img style="object-position: center 35%;" src="images/experience-musicians-2059.webp" alt="Two musicians playing guitar and violin on a bridge over the Arno, with a bottle of red wine between them" width="720" height="960" loading="lazy">
+            </div>
+            <button type="button" class="slides__btn slides__btn--prev" aria-label="Previous photo"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+            <button type="button" class="slides__btn slides__btn--next" aria-label="Next photo"><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+            <div class="slides__dots"></div>
+          </div>
+          <div class="iwm-exp-card__body">
+            <p class="iwm-eyebrow">Around Florence</p>
+            <h3 class="iwm-exp-card__title"><a href="#join">Experiences</a></h3>
+            <p class="iwm-exp-card__text">Florence, your way.</p>
+            <p class="iwm-exp-card__text walk-body">Whether it’s gliding by e-bike through the hills of <span lang="it">Toscana</span>, riding horseback past cypress and vine, or following a truffle dog through the autumn woods, I’ll guide you to the experience of a lifetime. Slip away for a day to soak in thermal springs and mud baths, wander the painted villages of the Cinque Terre, browse Florence’s markets with me for flowers, produce and local treasures, sip your way through family wineries and linger over long lunches in country trattorie. Back in the city, we taste authentic Florentine cuisine the way locals do, from <span lang="it">schiacciata</span> eaten at a street window to slow dinners in a neighbourhood <span lang="it">osteria</span>. These are the moments you carry home, and remember for the rest of your life.</p>
+            <p class="walk-detail">Private or small groups · In English</p>
+            <div class="iwm-exp-card__foot"><a href="#join" class="iwm-btn iwm-btn--text" data-walk="experiences" aria-label="Contact me: Experiences"><span>Contact me</span><svg class="iwm-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a></div>
           </div>
         </article>
     </div>
@@ -151,21 +242,21 @@
   <section class="helen" aria-labelledby="helen-title">
     <div class="helen__grid">
       <figure class="helen__figure">
-        <div class="helen__print"><img class="helen__photo iwm-img-warm" src="images/helen.webp" alt="Helen Appleyard smiling at a potter’s wheel in a ceramics workshop" width="720" height="960" loading="lazy"></div>
+        <div class="helen__print"><img class="helen__photo iwm-img-warm" src="images/helen-florence.webp" alt="Helen Appleyard sitting outside a café in Florence" width="800" height="1000" loading="lazy"></div>
       </figure>
       <div class="helen__text">
         <img class="helen__compass" src="images/compass-rose.webp" alt="" aria-hidden="true" width="123" height="115" loading="lazy">
         <p class="eyebrow">From Perth to Florence</p>
         <h2 id="helen-title" class="section-title">Ciao, I’m Helen</h2>
-        <p class="helen__bio">Italy stole my heart, so I learnt the language. Florence is my favourite city.</p>
+        <p class="helen__bio">Italy With Me is my way of sharing the Florence I love, one personal experience at a time, so you feel like a local, not a tourist.</p>
         <span class="iwm-script">Coffee first, then we wander.</span>
       </div>
     </div>
   </section>
 
   <section class="cta" aria-labelledby="cta-title">
-    <h2 id="cta-title" class="cta__title">Florence brings you. Its people keep you.</h2>
-    <a href="#join" class="iwm-btn iwm-btn--inverse iwm-btn--lg"><span>Join the list</span></a>
+    <h2 id="cta-title" class="cta__title">Florence has secrets. I know where to find them.</h2>
+    <a href="#join" class="iwm-btn iwm-btn--inverse iwm-btn--lg"><span>Contact me</span></a>
   </section>
 
   <section id="privacy" class="privacy" aria-labelledby="privacy-title">

@@ -124,6 +124,11 @@
     show('done');
   });
 
+  // "Contact me" on a tour card pre-selects that tour in the details step.
+  document.querySelectorAll('[data-walk]').forEach(function (btn) {
+    btn.addEventListener('click', function () { document.getElementById('walk').value = btn.dataset.walk; });
+  });
+
   document.querySelector('[data-skip]').addEventListener('click', function () { show('done'); });
 
   var shareBtn = document.querySelector('[data-share]');
