@@ -15,7 +15,7 @@ var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 var LABELS = {
   when: { soon: 'Within 6 months', year: 'In 6–12 months', later: 'Later' },
   who: { solo: 'Just me', partner: 'My partner', friends: 'A friend or two', group: 'A small group' },
-  walk: { artisans: 'The Hidden Artisans of Santo Spirito', wine: 'Florence Wine Window Tour' }
+  walk: { artisans: 'The Hidden Artisans of Santo Spirito', wine: 'Florence Wine Window Tour', workshops: 'Workshops', experiences: 'Experiences' }
 };
 
 function doPost(e) {
